@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <style>
+        body {
+            max-width: 440px;
+            margin: 0 auto;
+            padding: 48px 22px;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            color: #293d36;
+            background-color: #f1f3eb;
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            color: #285d4b;
+            font-size: 28px;
+            letter-spacing: -0.5px;
+        }
+
+        .kalkulator {
+            padding: 26px;
+            border: 1px solid #e1e6d9;
+            border-radius: 18px;
+            background-color: #fffefa;
+            box-shadow: 0 14px 35px rgba(48, 73, 56, 0.09);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            color: #53675c;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 18px;
+            padding: 12px;
+            border: 1px solid #dce3d8;
+            border-radius: 9px;
+            box-sizing: border-box;
+            font: inherit;
+            background-color: #f8f9f4;
+        }
+
+        input:focus {
+            border-color: #4a8b6a;
+            outline: 3px solid rgba(74, 139, 106, 0.14);
+        }
+
+        .operasi {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 2px;
+        }
+
+        button {
+            min-height: 48px;
+            border: 0;
+            border-radius: 10px;
+            background-color: #34785a;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 150ms ease, transform 150ms ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            background-color: #285d45;
+        }
+
+        button:focus-visible {
+            outline: 3px solid #9bc7a8;
+            outline-offset: 3px;
+        }
+
+        #hasil {
+            min-height: 26px;
+            margin: 22px 0 0;
+            padding: 13px;
+            border-radius: 9px;
+            background-color: #edf3e9;
+            color: #285d4b;
+            font-weight: bold;
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 24px 18px;
+            }
+
+            .kalkulator {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Kalkulator Sederhana</h1>
+    <main class="kalkulator">
+        <label for="angka1">Angka pertama</label>
+        <input type="number" id="angka1" step="any" placeholder="Masukkan angka pertama">
+
+        <label for="angka2">Angka kedua</label>
+        <input type="number" id="angka2" step="any" placeholder="Masukkan angka kedua">
+
+        <div class="operasi" aria-label="Operasi kalkulator">
+            <button type="button" data-operasi="tambah" aria-label="Tambah">+</button>
+            <button type="button" data-operasi="kurang" aria-label="Kurang">−</button>
+            <button type="button" data-operasi="kali" aria-label="Kali">×</button>
+            <button type="button" data-operasi="bagi" aria-label="Bagi">÷</button>
+        </div>
+
+        <p id="hasil" aria-live="polite">Hasil akan muncul di sini.</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

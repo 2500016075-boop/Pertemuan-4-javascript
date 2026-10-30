@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi To-Do List</title>
+    <style>
+        body {
+            max-width: 600px;
+            margin: 48px auto;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        #output5 {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        form {
+            display: flex;
+            gap: 8px;
+        }
+
+        #task-input {
+            flex: 1;
+            min-width: 0;
+            padding: 10px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            font: inherit;
+        }
+
+        button {
+            padding: 9px 14px;
+            border: 0;
+            border-radius: 5px;
+            background-color: #4f46e5;
+            color: white;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4338ca;
+        }
+
+        #task-list {
+            display: grid;
+            gap: 8px;
+            padding: 0;
+            list-style: none;
+        }
+
+        #task-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+
+        #task-list li span {
+            flex: 1;
+            overflow-wrap: anywhere;
+        }
+
+        .completed {
+            color: #777;
+            text-decoration: line-through;
+        }
+
+        .delete-task {
+            background-color: #dc2626;
+        }
+
+        .delete-task:hover {
+            background-color: #b91c1c;
+        }
+
+        #task-message:empty {
+            display: none;
+        }
+
+        #task-message.error {
+            color: #b91c1c;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                margin: 20px auto;
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <p>Tambahkan tugas, tandai yang sudah selesai, atau hapus tugas.</p>
+    <main id="output5"></main>
+    <script src="script.js"></script>
+</body>
+</html>
